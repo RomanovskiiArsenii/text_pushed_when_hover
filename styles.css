@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+:root {
+    --screenCoeff: calc(1vw + 1vh);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+}
+
+.text_container {
+    font-size: calc(var(--screenCoeff) * 5);
+    font-family: 'Martian Mono', monospace;
+    line-height: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-7deg) translate(-50%, -50%);
+    height: 1em;
+    text-wrap: nowrap;
+    overflow-y: hidden;
+    color: whitesmoke;
+}
+
+.text_container p {
+    transition: transform 0.6s ease;
+}
+
+.text_container p:nth-child(2) {
+    color: orange;
+}
+
+.text_container:hover p {
+    transform: translateY(-100%);
+}
